@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Golf Fitness Log</title>
+
+<!-- These lines make it work as its own app on the iPhone home screen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Golf Fit">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#1b6a43">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@600;700&family=Caveat:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* basic page setup, and room for the iPhone's notch and home bar */
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body { margin: 0; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<!--
+  index.html - THE PAGE ITSELF
+
+  This file is almost empty on purpose. The app.js code fills in the
+  "app" area with whichever screen you're on, and the "action-bar"
+  holds the big buttons at the bottom of the screen.
+
+  The scripts load in order: your exercises first, then the stick
+  figures, then the app that uses them both.
+-->
+
+<main class="app" id="app"></main>
+
+<div class="action-bar" id="action-bar" hidden>
+  <div class="action-bar-inner" id="actions"></div>
+</div>
+
+<script src="exercises.js"></script>
+<script src="figures.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
